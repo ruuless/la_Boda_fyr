@@ -1,221 +1,425 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8"
-  	     name="viewport"
-  	     content="width=device-width, initial-scale=1.0"
-  	     >
-  <title>Boda Francis y Raul </title>
-   
-<style>
-	#contador {
-  font-size: 20px;
-  letter-spacing: 2px;
-}
+	<head>
+	  <meta charset="UTF-8"
+	  	     name="viewport"
+	  	     content="width=device-width, initial-scale=1.0"
+	  >
+	  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+	  		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet"
+	  >
+	  <title>Boda Francis y Raul </title>
+	  <style>
+			#contador {
+	  		font-size: 20px;
+	  		letter-spacing: 2px;
+			}
+	/*
+		  body {
+		    font-family: "Times New Roman", serif;
+		    background: #ffffff;
+		    color: #000000;
+		    margin: 0;
+		    padding: 0;
+		  }*/
+			body {
+				margin: 0;
+			}
 
-  body {
-    font-family: "Times New Roman", serif;
-    background: #ffffff;
-    color: #000000;
-    margin: 0;
-    padding: 0;
-  }
+			.fondo {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: url("img/portada.jpg") center / cover no-repeat;
+				z-index: -1;
+			}
+			.fondo::after {
+  			content: "";
+  			position: absolute;
+  			inset: 0;
+  			background: rgba(0,0,0,0.4);
+			}
+			.hero {
+			  min-height: 100vh;
+			  display: flex;
+			  align-items: center;
+			  justify-content: center;
+			  text-align: center;
+			  color: white;
+			}
+		  .hero h1 {
+				font-size: 3rem;
+				letter-spacing: 3px;
+				margin: 0;
+			}
+			
+			.hero p {
+				font-size: 1.2rem;
+				margin: 15px 0;
+			}
+			
+			.hero span {
+				font-size: 1rem;
+				letter-spacing: 2px;
+			}
+			@media (max-width: 600px) {
+			  .hero h1 {
+			    font-size: 2.2rem;
+			    letter-spacing: 2px;
+			  }
+			
+			  .hero p {
+			    font-size: 1rem;
+				}
 
-  header {
-    text-align: center;
-    padding: 80px 20px 40px;
-  }
+  			section {
+			    padding: 60px 15px;
+			  }
+			}
+			.contenedor {
+			  width: 100%;
+			}
+			
+			/* solo en computadora */
+			@media (min-width: 900px) {
+			  .contenedor {
+			    max-width: 900px;   /* ancho elegante */
+			    margin: 0 auto;     /* centrado */
+			  }
+			}
+		  header {
+		  	 
+		    text-align: center;
+		    padding: 0px 0px 5px;
+		  }
+		
+		  header p {
+		   /* font-size: 14px;*/
+		    letter-spacing: 2px;
+		    text-transform: uppercase;
+		  }
+		
+		  h1 {
+		    font-size: 52px;
+		    letter-spacing: 4px;
+		    margin: 25px 0;
+		    font-weight: normal;
+		  }
+		
+		  h2 {
+		    font-size: 18px;
+		    letter-spacing: 3px;
+		    text-transform: uppercase;
+		    font-weight: normal;
+		  }
+		
+		  section {
+		    max-width: 550px;
+		    margin: 0 auto;
+		    padding: 20px 20px;
+		    text-align: center;
+		    line-height: 1.9;
+		    color: white;
+		  }
+		
+		  section strong {
+		    display: block;
+		    margin-top: 30px;
+		    font-size: 14px;
+		    letter-spacing: 2px;
+		    text-transform: uppercase;
+		  }
+		
+		  footer {
+		    text-align: center;
+		    margin: 60px 0 30px;
+		    font-size: 13px;
+		    letter-spacing: 1px;
+		  }
+		
+		  .linea {
+		  	 max-width: 450px;
+		    width: 40%;
+		    height: 1px;
+		    background: #000;
+		    margin: 20px auto;
+		  }
+		  .rsvp {
+		  	display: inline-block;
+		  	margin-top: 20px;
+		  	padding: 12px 28px;
+		  	border: 1px solid #000;
+		  	text-decoration: none;
+				color: #000;
+		  	letter-spacing: 2px;
+		  	text-transform: uppercase;
+		  	font-size: 13px;
+		  	transition: all 0.3s ease;
+		  }()
+		
+			.rsvp:hover {
+		  	background: #000;
+		  	color: #fff;
+			}
+			.imagen-principal {
+			  width: 100%;
+			  max-width: 550px;
+			  display: block;
+			  margin: 30px auto;
+			  /*border-radius: 12px;*/
+			}
+			.fyr {
+				 max-width: 550px;
+				 margin: 0 auto;
+			  font-family: 'Great Vibes', cursive;
+			  font-size: 40px;
+			  padding=: 20px;
+			}
+			.f {
+				  text-align: left;
+				  padding-left:20px;  
+			}
+			.r{
+				  text-align: right;
+				  padding-right:30px;
+			}
+			.texto {
+			  font-family: 'Playfair Display', serif;
+			  font-style: italic;
+			  padding:10px 20px;
+			}
+			.foto img {
+			  width: 100%;
+			  display: block;
+			
+			  /* Difuminado hacia abajo */
+			  -webkit-mask-image: linear-gradient(
+			    to bottom,
+			    rgba(0,0,0,1) 50%,
+			    rgba(0,0,0,0) 100%
+			  );
+			
+			  mask-image: linear-gradient(
+			    to bottom,
+			    rgba(0,0,0,1) 80%,
+			    rgba(0,0,0,0) 100%
+			  );
+			}
+		
+			.fotop {
+			  position: relative;
+			  width: 100%;
+			  top:00px;
+			}
+			
+			.fotop img {
+			  width: 100%;
+			  display: block;
+			  height: 400px;
+			}
+			
+			.fotop::after {
+			  content: "";
+			  position: absolute;
+			  bottom: 0;
+			  left: 0;
+			  width: 100%;
+			  height: 30%;
+			
+			  background: linear-gradient(
+			    to bottom,
+			    rgba(255,255,255,0) 0%,
+			    rgba(255,255,255,1) 100%
+			  );
+			}
+			
+			iframe {
+			  margin-top: 20px;
+			  border-radius: 10px;
+			}
+			
+			/* INTRO */
+			#intro {
+			  position: fixed;
+			  inset: 0;
+			  background: black; /* o transparente */
+			  display: flex;
+			  flex-direction: column;
+			  justify-content: center;
+			  align-items: center;
+			  /*gap: 30px;*/
+			  z-index: 9999;
+			  transition: opacity 1s ease;
+			}
+			
+			#intro img {
+			  max-width: 100%;
+			  max-height: 100%;
+			  position: block;
+			}
+			
+			/* BOTÓN */
+			#btnEntrar {
+			  padding: 12px 30px;
+			  font-size: 1rem;
+			  border: 1px solid white;
+			  background: transparent;
+			  color: white;
+			  cursor: pointer;
+			  letter-spacing: 2px;
+			  
+			  position: absolute;
+			  top: 57%;
+				left: 45%;/*
+				transform: translate(-0%, -0%);*/
+			}
+			
+			#btnEntrar:hover {
+			  background: white;
+			  color: black;
+			}
+			
+			/* CONTENIDO */
+			#invitacion {
+			  opacity: 0;
+			  transition: opacity 1s ease;
+			}
+			
+			/* CLASES ACTIVAS */
+			.ocultar {
+			  opacity: 0;
+			  pointer-events: none;
+			}
 
-  header p {
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
+			.mostrar {
+  			opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="intro">
+			<img src="https://blog.cosasmolonas.com/wp-content/uploads/2018/10/ff-forrar-interior-1170x878.jpg" alt="Bienvenida">
+  		<button id="btnEntrar">Abrir</button>
+		</div>
+		<div id="invitación">
+			<div class="fondo"></div>
+			<!--<header> 
+			   	
+			   </><div class="fotop">
+			    <img src="https://ruuless.github.io/la_Boda_fyr/img/portada.jpg" alt="Francis y Raúl" class="imagen-principal">
+			  </div> 
+			  <div class="fyr"> 
+			     <p class="f">FRANCIS</p> 
+			     <p class="y">& </p>
+			     <p class="r">RAUL </p>
+			  </div>
+			</header>-->
+			<div class="contenedor">
+				<header class="hero">
+		    	<div class="hero-contenido">
+		      	<h1>Francis & Raul</h1>
+		      	<p>Nos casamos</p>
+		      	<span>05 · Diciembre · 2026</span>
+		    	</div>
+		  	</header>
+			  <main>
+					<section>  
+					  <div class="linea">  </div>
+					  <p class="texto">
+					  	 Tenemos el honor de invitarles, Con la bendición de Dios y de nuestros padres, a celebrar<h2>El Sacramento del Matrimonio</h2>
+					  	</p>
+					</section>
+				
+					<section>
+						<p ><strong id="faltan"></strong></p>
+						<p id="contador"></p>
+						<div class="linea"></div>
+						<a href="https://wa.me/5213414206607?text=Confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Francis%20y%20Ra%C3%BAl"
+						   class="rsvp" target="_blank">
+						  Confirmar asistencia
+						</a>
+						<div class="linea"></div>
+						<p><strong>Ubicación</strong></p>
+						<iframe
+						  width="100%"
+						  height="250"
+						  style="border:0;"
+						  allowfullscreen=""
+						  loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.0416902274146!2d-103.58596352564489!3d19.880461426227633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8425819a3ed52001%3A0xcbabde3199913728!2sSal%C3%B3n%20de%20Eventos%20Encanto%20Sayula!5e0!3m2!1ses-419!2smx!4v1769523343453!5m2!1ses-419!2smx"
+						> 
+						</iframe>
+				  	<p><strong>Fecha</strong></p>
+				  	<p>Sábado, 5 de diciembre de 2026</p>
+				  	<p><strong>Hora</strong></p>
+				  	<p>13:00 hrs.</p>
+				
+				  	<p><strong>Lugar</strong></p>
+				  	<p>	Parroquia por confirmar
+				  			<br>
+				    		Ciudad Guzmán, Jalisco
+				    </p>
+					</section>
+					<div class="linea"></div>
+					<footer>
+				  	<p>Favor de llegar con puntualidad</p>
+					</footer>
+					<div class="linea"></div>
+				</main>
+			</div>
+		</div>
+		<script>
+			// const fechaBoda = new Date("december 5, 2026 13:00:00").getTime();
+			const fechaBoda = new Date("2026-12-05T13:00:00").getTime();
+	  	setInterval(() => {
+		    const ahora = new Date().getTime();
+		    const diferencia = fechaBoda - ahora;
+		    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+		    const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+		    const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+		    const segundos= Math.floor((diferencia/(1000))%60);
+		    
+		    if (diferencia < 0) {
+		    	  const misa = horas + 2;
+		    	 const fiesta=horas+14;
+		    	 if(fiesta<0){
+		    	 	  document.getElementById("faltan").innerHTML = "¡La boda fue un exito!";
+		    	 	  return;
+		    	 }
+		    	 if(misa<0){
+		    	 	  document.getElementById("faltan").innerHTML = "¡En la Fiesta!" ;
+		    	 	  document.getElementById("contador").innerHTML = "¡Corre! probablemente aun alcansas algo " ; 
+		    	 	  return;
+		    	 }
+		    	 if(misa>=0){
+		    	 	  document.getElementById("faltan").innerHTML = "¡En Misa!";
+		    	 	  document.getElementById("contador").innerHTML = "¡Corre! aun alcansas la fiesta " ;
+		    	 
+		    	  return;
+		    	 }
+		      return;
+		    }
+		    if(dias == 0 & horas<13){
+		    	  document.getElementById("faltan").innerHTML = "¡Hoy es el gran dia!";
+		    }
+		    else{
+		    	document.getElementById("faltan").innerHTML = "FALTAN";
+		    }    
+		    document.getElementById("contador").innerHTML =
+		      `${dias} días · ${horas} hrs · ${minutos} min · ${segundos} seg`;
+	  	}, 1000);
+	  	
+		  const btn = document.getElementById("btnEntrar");
+		  const intro = document.getElementById("intro");
+		  const contenido = document.getElementById("invitacion");
+		
+		  btn.addEventListener("click", () => {
+		    intro.classList.add("ocultar");
+		    contenido.classList.add("mostrar");
+		  });
 
-  h1 {
-    font-size: 52px;
-    letter-spacing: 4px;
-    margin: 25px 0;
-    font-weight: normal;
-  }
-
-  h2 {
-    font-size: 18px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: normal;
-  }
-
-  section {
-    max-width: 550px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    text-align: center;
-    line-height: 1.9;
-  }
-
-  section strong {
-    display: block;
-    margin-top: 30px;
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-
-  footer {
-    text-align: center;
-    margin: 60px 0 30px;
-    font-size: 13px;
-    letter-spacing: 1px;
-  }
-
-  .linea {
-  	 max-width: 500px;
-    width: 30%;
-    height: 1px;
-    background: #000;
-    margin: 30px auto;
-  }
-  .rsvp {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 28px;
-  border: 1px solid #000;
-  text-decoration: none;
-  color: #000;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-size: 13px;
-  transition: all 0.3s ease;
-}
-
-.rsvp:hover {
-  background: #000;
-  color: #fff;
-}
-.imagen-principal {
-  width: 100%;
-  max-width: 500px;
-  display: block;
-  margin: 30px auto;
-  border-radius: 12px;
-}
-.fotop img {
-  width: 100%;
-  display: block;
-
-  /* Difuminado hacia abajo */
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgba(0,0,0,1) 30%,
-    rgba(0,0,0,0) 100%
-  );
-
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0,0,0,1) 60%,
-    rgba(0,0,0,0) 100%
-  );
-}
-
-	
-iframe {
-  margin-top: 20px;
-  border-radius: 10px;
-}
-</style>
-</head>
-<body>
-	<script>
- // const fechaBoda = new Date("december 5, 2026 13:00:00").getTime();
-const fechaBoda = new Date("2026-12-05T13:00:00").getTime();
-  setInterval(() => {
-    const ahora = new Date().getTime();
-    const diferencia = fechaBoda - ahora;
-    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
-    const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
-    const segundos= Math.floor((diferencia/(1000))%60);
-    
-    if (diferencia < 0) {
-    	 
-    	 const misa = horas + 2;
-    	 const fiesta=horas+14;
-    	 
-    	 if(fiesta<0){
-    	 	  document.getElementById("faltan").innerHTML = "¡La boda fue un exito!";
-    	 	  return;
-    	 }
-    	 if(misa<0){
-    	 	  document.getElementById("faltan").innerHTML = "¡En la Fiesta!" ;
-    	 	  document.getElementById("contador").innerHTML = "¡Corre! probablemente aun alcansas algo " ; 
-    	 	  return;
-    	 }
-    	 if(misa>=0){
-    	 	  document.getElementById("faltan").innerHTML = "¡En Misa!";
-    	 	  document.getElementById("contador").innerHTML = "¡Corre! aun alcansas la fiesta " ;
-    	 
-    	  return;
-    	 }
-    	  
-      return;
-    }
-    if(dias == 0 & horas<13){
-    	  document.getElementById("faltan").innerHTML = "¡Hoy es el gran dia!";
-      
-    }
-    else{
-    	document.getElementById("faltan").innerHTML = "FALTAN";
-    }    document.getElementById("contador").innerHTML =
-      `${dias} días · ${horas} hrs · ${minutos} min · ${segundos} seg`;
-  }, 1000);
-</script>
-<header> 
-  <div class="fotop">
-    <img src="img/portada.jpg" alt="Francis y Raúl" class="imagen-principal">
-  </div>
-  <p>Con la bendición de Dios y de nuestros padres</p>
-  <h1>Raul<br>y<br>Francis</h1>
-  <p>Tienen el honor de invitarles a celebrar</p>
-  <h2>El Sacramento del Matrimonio</h2>
-  <div class="linea"></div>
-</header>
-
-<section>
-	
-<p ><strong id="faltan"></strong></p>
-<p id="contador"></p>
-<div class="linea"></div>
-
-<a href="https://wa.me/5213414206607?text=Confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Francis%20y%20Ra%C3%BAl"
-   class="rsvp" target="_blank">
-  Confirmar asistencia
-</a>
-  <div class="linea"></div>
-
-<p><strong>Ubicación</strong></p>
-
-<iframe
-  
-  width="100%"
-  height="250"
-  style="border:0;"
-  allowfullscreen=""
-  loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.0416902274146!2d-103.58596352564489!3d19.880461426227633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8425819a3ed52001%3A0xcbabde3199913728!2sSal%C3%B3n%20de%20Eventos%20Encanto%20Sayula!5e0!3m2!1ses-419!2smx!4v1769523343453!5m2!1ses-419!2smx"> </iframe>
-  <p><strong>Fecha</strong></p>
-  <p>Sábado, 5 de diciembre de 2026</p>
-
-  <p><strong>Hora</strong></p>
-  <p>13:00 hrs.</p>
-
-  <p><strong>Lugar</strong></p>
-  <p>Parroquia por confirmar<br>
-     Ciudad Guzmán, Jalisco</p>
-</section>
-<div class="linea"></div>
-<footer>
-  <p>Favor de llegar con puntualidad</p>
-</footer>
-<div class="linea"></div>
-</body>
+		</script>
+	</body>
 </html>
